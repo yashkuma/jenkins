@@ -1,23 +1,21 @@
 pipeline {
-  agent any
-  stages {
-    stage("Dev") {
-      steps {
-        echo 'Hi, welcome for my first jenkins pipeline project'
-      }
+    agent any
+        stages {
+            stage('Dev') {
+                steps {
+                echo 'Hi, welcome for my first jenkins pipeline project'
+                }
 
-    stage("QA")
-    steps{
-        input('Do you agree for next step')
-    }
+            stage('QA')
+                steps   {
+                input('Do you agree for next step')
+                }
 
-    stage ("UAT")
-    steps{
-        echo 'completed'
-    }
+            stage ('UAT')
+            steps   {
+                echo 'completed'
+                }
         
-        
-      
     }
   }
 }
