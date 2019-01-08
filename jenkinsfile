@@ -5,17 +5,17 @@ pipeline {
                 steps   {
                 echo 'Hi, welcome for my first jenkins pipeline project'
                 }
-
-            stage('QA')
+            }
+            stage('QA') {
                 steps   {
                 input('Do you agree for next step')
                 }
-
-            stage ('UAT')
+            }
+            stage ('UAT') {
                 steps   {
                 echo 'completed'
                 }
-        
+        }
     }
   }
 }
